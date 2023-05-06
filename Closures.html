@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Closure Example</title>
+</head>
+<body>
+	<h1>Closure Example</h1>
+	<p>Click the button to increment the counter:</p>
+	<button id="counter-btn">Click me!</button>
+	<p id="counter"></p>
+	<script>
+        // Counter function that returns a function which increments the counter variable
+function createCounter() {
+  let counter = 0;
+
+  function incrementCounter() {
+    counter++;
+    document.getElementById("counter").innerHTML = "Counter: " + counter;
+  }
+
+  return incrementCounter;
+}
+
+// Create a closure with the createCounter function
+let counterClosure = createCounter();
+
+// Add an event listener to the button to execute the closure on click
+document.getElementById("counter-btn").addEventListener("click", counterClosure);
+
+    </script>
+</body>
+</html>
