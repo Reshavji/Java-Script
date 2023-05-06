@@ -25,7 +25,12 @@
           console.log("Clicked on item: ", event.target.innerText);
         }
       });
-
+    // event.target refers to the HTML element that triggered the event.
+    // .nodeName property returns the name of the HTML element in uppercase letters.
+    // So event.target.nodeName === "LI" checks if the HTML element that triggered the
+    //  event is a <li> element (list item) or not.
+    // This is often used in event listeners for a list of items, where you 
+    // want to perform a certain action only when a list item is clicked.
       </script>
 </body>
 </html>
